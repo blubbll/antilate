@@ -4,9 +4,26 @@
 // init project
 const express = require("express");
 const app = express();
+const cors = require("cors");
 
 // we've started you off with Express,
 // but feel free to use whatever libs or frameworks you'd like through `package.json`.
+
+var corsOptions = {
+  origin: function(origin, callback) {
+    if (origin) {
+      console.log(`Origin: ${origin}`);
+      if (origin === "https://translate.googleusercontent.com") {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    } else callback(null, true);
+  }
+};
+
+app.options("*", cors());
+app.use(cors(corsOptions));
 
 // http://expressjs.com/en/starter/static-files.html
 app.use(express.static("public"));

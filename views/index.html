@@ -18,6 +18,7 @@
       href="https://glitch.com/edit/favicon-app.ico"
       type="image/x-icon"
     />
+    <meta name="google" content="notranslate h">
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -37,32 +38,79 @@
     <link rel="stylesheet" href="/style.css" />
 
     <!-- import the webpage's client-side javascript file -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/cash/4.1.5/cash.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   </head>
   <body>
     <header>
-      <h1>
-        what's trans, dog?
-      </h1>
+      <div class="container">
+        <section>
+          <h1>
+            what's trans, dog?
+          </h1>
+        </section>
+
+        <section>
+          <h2 id="colors">L: original | R: transmooked</h2>
+        </section>
+      </div>
     </header>
 
     <main class="background-white padding-vertical-xxl">
       <div class="container">
-        <h2 id="colors">L: original | R: transmooked</h2>
-
-        <section id="1" class="border padding-s max-width-s border-radius">
+        <h3>
+          Simple p test
+        </h3>
+        <section id="1" class="border padding-s max-width-m border-radius">
           <pre>
           <code class="html">
             <p>
-              Test
+             This is a test
+            </p>
+          </code>
+          </pre>
+          <pre>
+          <code class="html">
+            <p>
+              This is a test
             </p>
           </code>
           </pre>
         </section>
       </div>
+      <div class="container notranslate">
+        <h3>
+          Simple p test 2
+        </h3>
+        <section id="2" class="border padding-s max-width-m border-radius notranslate">
+          <pre>
+          <code class="html" pre>
+            <p>
+             This is a test
+            </p>
+          </code>
+          </pre>
+          <pre>
+          <code class="html" post>
+            <p>
+             This is a test
+            </p>
+          </code>
+          </pre>
+        </section>
+      </div>
+      <div class="container notranslate">
+        <h3>
+          Simple a test
+        </h3>
+        <section id="3" class="border padding-s max-width-m border-radius notranslate">
+         <a href="https://google.de">
+          <span>This is a test link</span>
+          </a>
+        </section>
+      </div>
     </main>
-        <script>
-      hljs.initHighlightingOnLoad();
+    <script>
+   //   hljs.initHighlightingOnLoad();
     </script>
   </body>
   <script src="/client.js" defer></script>
