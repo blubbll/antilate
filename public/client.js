@@ -1,10 +1,13 @@
 //fix da pres
 
 const beauty = str => {
-  return window.html_beautify(str, {
-    indent_size: 2,
-    space_in_empty_paren: false
-  });
+  return window.html_beautify(
+    str.replace(/></gm, ">\r\n<").trim(),
+    {
+      indent_size: 3,
+      end_with_newline: 1
+    }
+  );
 };
 
 fetch("https://antilate.glitch.me/")
@@ -27,14 +30,9 @@ fetch("https://antilate.glitch.me/")
             .find("pre[pos]")
             .html();
 
-          const brokenHtmlmod = beauty(
-            brokenHtml ? brokenHtml.split(/</).join("\r\n<") : origHtml
-          );
-          const origHtmlmod = beauty(
-            beauty(origHtml)
-              .split(/</)
-              .join("\r\n<")
-          );
+          const brokenHtmlmod = beauty(brokenHtml ? brokenHtml : origHtml);
+          const origHtmlmod = beauty(beauty(origHtml));
+                    
           //fix pre code
           $(`#${curId}`)
             .find("pre[pre]")
@@ -47,14 +45,7 @@ fetch("https://antilate.glitch.me/")
       });
     } else {
       $("pre[pre]").each((i, el) => {
-        $(el).text(
-          beauty(
-            $(el)
-              .html()
-              .split(/</)
-              .join("\r\n<")
-          )
-        );
+        $(el).text(beauty($(el).html()));
       });
 
       $("pre[pos]").text("not translating 🙉");
