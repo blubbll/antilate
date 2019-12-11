@@ -18,24 +18,19 @@
       href="https://glitch.com/edit/favicon-app.ico"
       type="image/x-icon"
     />
-    <meta name="google" content="notranslate h">
+    <meta name="google" content="notranslate h" />
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+    <script src="https://cdn.rawgit.com/beautify-web/js-beautify/v1.10.2/js/lib/beautify-html.js"></script>
     <!-- import the webpage's stylesheet -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/turretcss@5.2.1/dist/turretcss.min.css"
     />
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/default.min.css"
-    />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
-
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="./style.css" />
 
     <!-- import the webpage's client-side javascript file -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -56,62 +51,124 @@
     </header>
 
     <main class="background-white padding-vertical-xxl">
+      <!---------------------------------->
+      <div class="container">
+        <h3 class="notranslate">
+          Simple div test
+        </h3>
+        <section id="1" class="border padding-s border-radius">
+          <pre pre>
+            <div>
+            This is a test
+            </div>
+          </pre>
+          <pre pos>
+            <div>
+            This is a test
+            </div>
+          </pre>
+        </section>
+      </div>
+      <!---------------------------------->
+      <div class="container notranslate">
+        <h3 class="notranslate">
+          Simple div test (.notranslate)
+        </h3>
+        <section id="2" class="border padding-s border-radius">
+          <pre pre>
+            <div>
+            This is a test
+            </div>
+          </pre>
+          <pre pos>
+            <div>
+            This is a test
+            </div>
+          </pre>
+        </section>
+      </div>
+      <!---------------------------------->
+      <div class="container">
+        <h3 class="notranslate">
+          Simple "code" test
+        </h3>
+        <section id="3" class="border padding-s border-radius">
+          <pre pre>
+            <code>
+              Cookie
+            </code>
+          </pre>
+          <pre pos>
+              <code>
+              Cookie
+            </code>
+          </pre>
+        </section>
+      </div>
+      <!---------------------------------->
+
+      <div class="container">
+        <h3 class="notranslate">
+          Simple "span" test
+        </h3>
+        <section id="4" class="border padding-s border-radius">
+          <pre pre>
+            <span>
+              Pork
+            </span>
+          </pre>
+          <pre pos>
+               <span>
+              Pork
+            </span>
+          </pre>
+        </section>
+      </div>
+      <!---------------------------------->
       <div class="container">
         <h3>
-          Simple p test
+          Simple Link test
         </h3>
-        <section id="1" class="border padding-s max-width-m border-radius">
-          <pre>
-          <code class="html">
-            <p>
-             This is a test
-            </p>
-          </code>
+        <section id="5" class="border padding-s border-radius">
+          <pre pre>
+            <a href="//example.com">
+              Click me :))
+            </a>
           </pre>
-          <pre>
-          <code class="html">
-            <p>
-              This is a test
-            </p>
-          </code>
+          <pre pos>
+            <a href="//example.com">
+              Click me :))
+            </a>
           </pre>
         </section>
       </div>
-      <div class="container notranslate">
+      <!---------------------------------->
+      <div class="container">
         <h3>
-          Simple p test 2
+          testlink
         </h3>
-        <section id="2" class="border padding-s max-width-m border-radius notranslate">
-          <pre>
-          <code class="html" pre>
-            <p>
-             This is a test
-            </p>
-          </code>
+        <section id="6" class="border padding-s border-radius">
+          <pre pre>
+            <a class="panel1 cur" href="#"
+              ><span
+                ><span class="nummer">1</span
+                ><span class="titel">Testraße</span></span
+              ></a
+            >
           </pre>
-          <pre>
-          <code class="html" post>
-            <p>
-             This is a test
-            </p>
-          </code>
+          <pre pos>
+           <a class="panel1 cur" href="#"
+              ><span
+                ><span class="nummer">1</span
+                ><span class="titel">Testraße</span></span
+              ></a
+            >
           </pre>
         </section>
       </div>
-      <div class="container notranslate">
-        <h3>
-          Simple a test
-        </h3>
-        <section id="3" class="border padding-s max-width-m border-radius notranslate">
-         <a href="https://google.de">
-          <span>This is a test link</span>
-          </a>
-        </section>
-      </div>
+      <!---------------------------------->
     </main>
-    <script>
-   //   hljs.initHighlightingOnLoad();
-    </script>
+    <script></script>
   </body>
   <script src="/client.js" defer></script>
 </html>

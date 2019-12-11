@@ -1,17 +1,29 @@
-body{
+body {
   padding: 15px;
 }
 
-pre{
+pre {
   flex: auto;
 }
 
-section, header{
+section,
+header {
   display: flex;
-  margin:auto;
+  margin: auto;
 }
-.container{
-  width: auto!important;
+.container {
+  width: auto !important;
   margin-top: 15px;
   text-align: center;
+}
+pre[pre] {
+  background: whitesmoke;
+}
+pre[pos] {
+  background: #b2dcef;
+  max-width: 75%;
+}
+
+.notranslate section{
+  background: silver;
 }
